@@ -62,6 +62,8 @@
                             @Html.DisplayFor(m => item.Avaibility)
                         </td>
                         <td>
+                            <a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-success">Edit</a>
+                            
                             <button asp-page-handler="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Delete</button>
                         </td>
                     </tr>
