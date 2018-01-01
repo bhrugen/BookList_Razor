@@ -12,7 +12,8 @@ namespace BookList_Razor.Pages.BookList
     public class IndexModel : PageModel
     {
         private ApplicationDbContext _db;
-
+        [TempData]
+        public string Message { get; set; }
 
         public IndexModel(ApplicationDbContext db)
         {

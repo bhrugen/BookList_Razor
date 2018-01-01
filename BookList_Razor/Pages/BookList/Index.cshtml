@@ -1,4 +1,4 @@
-﻿@page "{id:int?}/{handler?}"
+﻿@page
 @model IndexModel
 @{
 }
@@ -6,6 +6,16 @@
 <br />
 <h2> Book List</h2>
 <br />
+
+@if (Model.Message != null)
+{
+    <div class="alert alert-info alert-dismissable" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        @Model.Message
+    </div>
+}
 
 <a asp-page="Create" class="btn btn-primary">Create New Book</a>
 
