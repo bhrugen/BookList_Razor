@@ -41,6 +41,7 @@
                     <th>
                         @Html.DisplayNameFor(m => m.Books.FirstOrDefault().Avaibility)
                     </th>
+                    <th></th>
                 </tr>
                 @foreach (var item in Model.Books)
                 {
@@ -59,6 +60,9 @@
                         </td>
                         <td>
                             @Html.DisplayFor(m => item.Avaibility)
+                        </td>
+                        <td>
+                            <button asp-page-handler="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Delete</button>
                         </td>
                     </tr>
 
